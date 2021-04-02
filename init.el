@@ -32,23 +32,63 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (setq package-enable-at-startup nil)
-(package-initialize)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil-visual-mark-mode)))
+ '(package-selected-packages '(tuareg rust-mode haskell-mode evil-visual-mark-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(package-initialize)
 
-;; Operate in evil mode by default
+
+;; Add evil mode but don't use it by default
 (require 'evil)
-(evil-mode t)
+;;(evil-mode t)
+
+;; Add rust mode (via MELPA)
+(require 'rust-mode)
+
+;; Add tuareg (via MELPA)
+(require 'tuareg)
+
+;; ;; Trying to install tuareg
+;; (require 'cl-lib)
+;;      (use-package tuareg
+;; 		  :ensure t
+;; 		  :config
+;; 		  (add-hook 'tuareg-mode-hook #'electric-pair-local-mode)
+;; 		  ;; (add-hook 'tuareg-mode-hook 'tuareg-imenu-set-imenu)
+;; 		  (setq auto-mode-alist
+;; 			(append '(("\\.ml[ily]?$" . tuareg-mode)
+;; 				  ("\\.topml$" . tuareg-mode))
+;; 				auto-mode-alist)))
+
+;;      ;; Merlin configuration
+;;      (use-package merlin
+;; 		  :ensure t
+;; 		  :config
+;; 		  (add-hook 'tuareg-mode-hook 'merlin-mode)
+;; 		  (add-hook 'merlin-mode-hook #'company-mode)
+;; 		  (setq merlin-error-after-save nil))
+     
+;;      ;; utop configuration
+
+;;      (use-package utop
+;; 		  :ensure t
+;; 		  :config
+;; 		  (autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
+;; 		  (add-hook 'tuareg-mode-hook 'utop-minor-mode)
+;; 		  )
+
+;; Turn on delete selection mode
+(delete-selection-mode 1)
 
 ;; Enable Org mode
 (require 'org)
