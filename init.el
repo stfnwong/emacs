@@ -1,5 +1,4 @@
 ;; Init file
-
 ;; Colorscheme
 (load-theme 'tango-dark)
 ;; Line numbers
@@ -29,34 +28,41 @@
 
 
 ;; Packages
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(setq package-enable-at-startup nil)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(tuareg rust-mode haskell-mode evil-visual-mark-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(package-initialize)
+;; try to load all the specified packages
+(load "~/.emacs.d/packages.el")
 
 
-;; Add evil mode but don't use it by default
-(require 'evil)
-;;(evil-mode t)
 
-;; Add rust mode (via MELPA)
-(require 'rust-mode)
+;; (package-initialize)
+;; ;; (require 'package)
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;; (setq package-enable-at-startup nil)
 
-;; Add tuareg (via MELPA)
-(require 'tuareg)
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(package-selected-packages '(tuareg rust-mode haskell-mode evil-visual-mark-mode)))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
+
+
+
+;; ;; Add evil mode but don't use it by default
+;; ;;
+;; (require 'evil)
+;; ;;(evil-mode t)
+
+;; ;; Add rust mode (via MELPA)
+;; (require 'rust-mode)
+
+;; ;; Add tuareg (via MELPA)
+;; (require 'tuareg)
 
 ;; ;; Trying to install tuareg
 ;; (require 'cl-lib)
