@@ -34,6 +34,9 @@
 ;; Turn on delete selection mode
 (delete-selection-mode 1)
 
+;; Adjust the default tab length 
+(setq-default tab-width 4)
+
 ;; Enable Org mode
 (require 'org)
 ;; Set org mode to work with files ending in *.org

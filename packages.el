@@ -12,7 +12,7 @@
 
 ;; select packages here
 (setq package-list
-      '(python-environment rust-mode haskell-mode tuareg evil ))
+      '(python-environment rust-mode haskell-mode tuareg evil glsl-mode ))
 			   
 ;; activate the packages
 (package-initialize)
