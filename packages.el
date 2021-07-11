@@ -1,6 +1,6 @@
 ;; Packages
 
-;; Takeaway order - 1x Pad Si Ew (Chicken), 1x Egg Fried Rice
+
 
 ;; 
 (require 'package)
@@ -12,7 +12,7 @@
 
 ;; select packages here
 (setq package-list
-      '(python-environment rust-mode haskell-mode tuareg evil glsl-mode ))
+      '(python-environment rust-mode haskell-mode tuareg evil darkburn-theme darkmine-theme))
 			   
 ;; activate the packages
 (package-initialize)
