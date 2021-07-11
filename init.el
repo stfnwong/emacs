@@ -46,3 +46,11 @@
 (global-set-key "\C-c a" 'org-agenda)
 (global-set-key "\C-c l" 'org-store-link)
 (global-set-key "\C-c c" 'org-capture)
+
+;; Add parentheses-mode as a minor mode 
+(require 'highlight-parentheses)
+
+(define-globalized-minor-mode global-highlight-parentheses-mode highlight-parentheses-mode
+    (lambda nil (highlight-parentheses-mode t)))
+
+(global-highlight-parentheses-mode t)
