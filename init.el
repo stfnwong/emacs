@@ -1,6 +1,6 @@
 ;; Init file
 ;; Colorscheme
-(load-theme 'tango-dark)
+(load-theme 'darkburn)
 ;; Line numbers
 (when (version<= "26.0.50" emacs-version)
   (global-display-line-numbers-mode))
@@ -43,3 +43,41 @@
 (global-set-key "\C-c a" 'org-agenda)
 (global-set-key "\C-c l" 'org-store-link)
 (global-set-key "\C-c c" 'org-capture)
+
+;; ;; Add a horizontal recenter
+;; (defun horz-recenter ()
+;;   "make the current point horizontally centered in the window"
+;;   (interactive)
+;;   (let ((mid (/ (window-width) 2))
+;; 	(line-len (save-excursion (end-of-line) (current-column)))
+;; 	(cur (current-column)))
+;;     (if (< mid-cur)
+;; 	(set-window-hscroll (selected-window)
+;; 			    (- cur mid)))))
+
+;; (global-set-key (kbd "C-S-l") 'horz-recenter)
+ 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
+ '(package-selected-packages
+   '(darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+;; cc-mode options
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+;; Enable CUA mode (rectangle select)
+;;(setq cua-enable-cua-keys nil)
+;;(cua-mode)
