@@ -37,6 +37,9 @@
 ;; Adjust the default tab length 
 (setq-default tab-width 4)
 
+;; Add C-c C-i as change-inner globally
+(global-set-key "\C-c \C-i" 'change-inner)
+
 ;; Enable Org mode
 (require 'org)
 ;; Set org mode to work with files ending in *.org
