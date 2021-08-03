@@ -39,6 +39,8 @@
 
 ;; Add C-c C-i as change-inner globally
 (global-set-key "\C-c \C-i" 'change-inner)
+(global-set-key "\C-c \C-o" 'change-outer)
+(global-set-key "\C-c \C-w" 'change-word)
 
 ;; Enable Org mode
 (require 'org)
@@ -53,7 +55,7 @@
 ;; Add parentheses-mode as a minor mode 
 (require 'highlight-parentheses)
 
-(define-globalized-minor-mode global-highlight-parentheses-mode highlight-parentheses-mode
+(define-globalized-minor-mode global-highlight-parentheses highlight-parentheses-mode
     (lambda nil (highlight-parentheses-mode t)))
 
 (global-highlight-parentheses-mode t)
