@@ -59,6 +59,17 @@
     (lambda nil (highlight-parentheses-mode t)))
 
 (global-highlight-parentheses-mode t)
+
+;; Settings for lsp-mode
+(setq lsp-keymap-prefix "s-l")
+
+(require 'lsp-mode)
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c++-mode-hook 'lsp)
+(add-hook 'tuareg-hook 'lsp)
+(add-hook 'python-mode-hook 'lsp)
+(add-hook 'rust-mode-hook 'lsp)
+
 ;; ;; Add a horizontal recenter
 ;; (defun horz-recenter ()
 ;;   "make the current point horizontally centered in the window"
