@@ -4,3 +4,5 @@
 
 # Ignore emacs swap files 
 *~
+# Ignore elpa directory
+elpa/
