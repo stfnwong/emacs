@@ -64,11 +64,14 @@
 (setq lsp-keymap-prefix "s-l")
 
 (require 'lsp-mode)
+
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'tuareg-hook 'lsp)
 (add-hook 'python-mode-hook 'lsp)
 (add-hook 'rust-mode-hook 'lsp)
+
+
 
 ;; ;; Add a horizontal recenter
 ;; (defun horz-recenter ()
@@ -91,7 +94,7 @@
  '(custom-safe-themes
    '("7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
  '(package-selected-packages
-   '(dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
+   '(which-key dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
