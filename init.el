@@ -1,6 +1,4 @@
 ;; Init file
-;; Colorscheme
-(load-theme 'darkburn)
 ;; Line numbers
 (when (version<= "26.0.50" emacs-version)
   (global-display-line-numbers-mode))
@@ -31,6 +29,9 @@
 ;; Check all required packages and load any that are missing
 (load "~/.emacs.d/packages.el")
 
+;; Colorscheme
+(load-theme 'darkburn)
+
 ;; Turn on delete selection mode
 (delete-selection-mode 1)
 
@@ -38,9 +39,9 @@
 (setq-default tab-width 4)
 
 ;; Add C-c C-i as change-inner globally
-(global-set-key "\C-c \C-i" 'change-inner)
-(global-set-key "\C-c \C-o" 'change-outer)
-(global-set-key "\C-c \C-w" 'change-word)
+(global-set-key "C-c M-i" 'change-inner)
+(global-set-key "C-c M-o" 'change-outer)
+(global-set-key "C-c M-w" 'change-word)
 
 ;; Enable Org mode
 (require 'org)
