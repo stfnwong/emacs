@@ -39,9 +39,13 @@
 (setq-default tab-width 4)
 
 ;; Add C-c C-i as change-inner globally
-(global-set-key "C-c M-i" 'change-inner)
-(global-set-key "C-c M-o" 'change-outer)
-(global-set-key "C-c M-w" 'change-word)
+(global-set-key (kbd "C-c M-i") 'change-inner)
+(global-set-key (kbd "C-c M-o") 'change-outer)
+(global-set-key (kbd "C-c M-w") 'change-word)
+
+;; Also add in expand region by itself
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Enable Org mode
 (require 'org)
@@ -49,9 +53,9 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;; Add the org-mode bindings
-(global-set-key "\C-c a" 'org-agenda)
-(global-set-key "\C-c l" 'org-store-link)
-(global-set-key "\C-c c" 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 ;; Add parentheses-mode as a minor mode 
 (require 'highlight-parentheses)
@@ -63,7 +67,6 @@
 
 ;; Settings for lsp-mode
 (setq lsp-keymap-prefix "s-l")
-
 (require 'lsp-mode)
 
 (add-hook 'c-mode-hook 'lsp)
