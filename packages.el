@@ -1,18 +1,31 @@
 ;; Packages
 
-
-
-;; 
 (require 'package)
-
 (add-to-list 'package-archives '("mepla-stable" . "http://melpa-stable.milkbox.net/packages/") t)
-
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 
-;; select packages here
+;; Install these packages 
 (setq package-list
-      '(python-environment change-inner highlight-parentheses lsp-mode rust-mode haskell-mode markdown-mode which-key tuareg evil darkburn-theme darkmine-theme dune magit))
+      '(python-environment
+		change-inner
+		highlight-parentheses
+		lsp-mode
+		rust-mode
+		haskell-mode
+		markdown-mode
+		which-key
+		tuareg
+		evil
+		darkburn-theme
+		darkmine-theme
+		dune
+		magit
+		fzf
+		geiser
+		geiser-guile
+		)
+	  )
 			   
 ;; activate the packages
 (package-initialize)

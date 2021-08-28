@@ -46,6 +46,10 @@
 ;; Also add in expand region by itself
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-x M-w") 'er/mark-word)
+(global-set-key (kbd "C-x M-s") 'er/mark-symbol)
+(global-set-key (kbd "C-x M-p") 'er/mark-inside-pairs)
+(global-set-key (kbd "C-x M-o") 'er/mark-outside-pairs)
 
 ;; Enable Org mode
 (require 'org)
@@ -55,8 +59,13 @@
 ;; Add the org-mode bindings
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c c") 'org-Capture)
 
+;; ========= Geiser 
+;; TODO: replace this with the output of $(which guile)
+;;(setq geiser-mit-binary "/usr/bin/guile2.2")
+;;(setq geiser-active-implementations '(guile2.2))
+(setq geiser-guile-binary "guile2.2")
 ;; Add parentheses-mode as a minor mode 
 (require 'highlight-parentheses)
 
@@ -97,6 +106,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
+ '(geiser-guile-binary "guile2.2" t)
  '(package-selected-packages
    '(which-key dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
 (custom-set-faces
