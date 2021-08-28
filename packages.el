@@ -12,7 +12,7 @@
 
 ;; select packages here
 (setq package-list
-      '(python-environment change-inner highlight-parentheses lsp-mode rust-mode haskell-mode markdown-mode which-key tuareg evil darkburn-theme darkmine-theme dune))
+      '(python-environment change-inner highlight-parentheses lsp-mode rust-mode haskell-mode markdown-mode which-key tuareg evil darkburn-theme darkmine-theme dune magit))
 			   
 ;; activate the packages
 (package-initialize)
