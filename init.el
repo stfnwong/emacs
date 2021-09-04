@@ -14,7 +14,7 @@
 	      (left . 50)
 	      (top . 50)))
       (setq default-frame-alist
-	    '(
+	    '(e
 	      (tool-bar-lines . 0)
 	      (width . 105)
 	      (height . 60)
@@ -30,7 +30,8 @@
 (load "~/.emacs.d/packages.el")
 
 ;; Colorscheme
-(load-theme 'darkburn)
+;;(load-theme 'afternoon t)
+(load-theme 'arc-dark t)
 
 ;; Turn on delete selection mode
 (delete-selection-mode 1)
@@ -105,10 +106,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
- '(geiser-guile-binary "guile2.2" t)
+   '("57e3f215bef8784157991c4957965aa31bac935aca011b29d7d8e113a652b693" "7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
+ '(geiser-guile-binary "guile2.2")
  '(package-selected-packages
-   '(which-key dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
+   '(pyenv pyenv-mode dracula-theme colonoscopy-theme badger-theme arc-dark-theme afternoon-theme abyss-theme which-key dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
