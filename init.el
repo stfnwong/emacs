@@ -124,3 +124,13 @@
 ;; Enable CUA mode (rectangle select)
 ;;(setq cua-enable-cua-keys nil)
 ;;(cua-mode)
+
+
+;; Move all the backup files to a common place
+;;(setq backup-directory-alist
+;;	  ((".", (expand-file-name
+;;			  (concat user-emacs-directory "backups")))))
+;;
+;;;; Write autosave files to temp dir
+;;(setq auto-save-file-name-transforms
+;;	  ((",", temporary-file-directory t)))
