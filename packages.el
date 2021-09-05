@@ -8,6 +8,7 @@
 ;; Install these packages 
 (setq package-list
       '(python-environment
+		pyenv
 		change-inner
 		highlight-parentheses
 		lsp-mode
@@ -17,13 +18,17 @@
 		which-key
 		tuareg
 		evil
-		darkburn-theme
-		darkmine-theme
 		dune
 		magit
 		fzf
 		geiser
 		geiser-guile
+		darkburn-theme
+		darkmine-theme
+		afternoon-theme
+		arc-dark-theme
+		colonoscopy-theme
+		dracula-theme
 		)
 	  )
 			   
