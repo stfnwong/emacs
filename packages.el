@@ -4,11 +4,16 @@
 (add-to-list 'package-archives '("mepla-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
-
+;; TODO: group all the theme packages together 
 ;; Install these packages 
 (setq package-list
       '(python-environment
-		pyenv
+		ancient-one-dark-theme
+		dream-theme
+		ewal-doom-themes
+	    ewal-evil-cursors
+		exotica-theme
+		pyenv-mode-auto
 		change-inner
 		highlight-parentheses
 		lsp-mode
@@ -21,6 +26,7 @@
 		dune
 		magit
 		fzf
+		scheme-complete
 		geiser
 		geiser-guile
 		darkburn-theme
@@ -29,6 +35,8 @@
 		arc-dark-theme
 		colonoscopy-theme
 		dracula-theme
+		solidity-mode
+		org-tree-slide
 		)
 	  )
 			   

@@ -1,4 +1,7 @@
+;; ================
 ;; Init file
+;; ================
+
 ;; Line numbers
 (when (version<= "26.0.50" emacs-version)
   (global-display-line-numbers-mode))
@@ -62,6 +65,10 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c c") 'org-Capture)
 
+;; Add TODO keywords for org mode
+(setq org-todo-keywords
+	  '((sequence "TOOD" "IN-PROGRESS" "WAITING" "DONE")))
+
 ;; ========= Geiser 
 ;; TODO: replace this with the output of $(which guile)
 ;;(setq geiser-mit-binary "/usr/bin/guile2.2")
@@ -76,7 +83,7 @@
 (global-highlight-parentheses-mode t)
 
 ;; Settings for lsp-mode
-(setq lsp-keymap-prefix "s-l")
+(setq lsp-keymap-prefix "s-L")
 (require 'lsp-mode)
 
 (add-hook 'c-mode-hook 'lsp)
@@ -85,39 +92,6 @@
 (add-hook 'python-mode-hook 'lsp)
 (add-hook 'rust-mode-hook 'lsp)
 
-
-
-;; ;; Add a horizontal recenter
-;; (defun horz-recenter ()
-;;   "make the current point horizontally centered in the window"
-;;   (interactive)
-;;   (let ((mid (/ (window-width) 2))
-;; 	(line-len (save-excursion (end-of-line) (current-column)))
-;; 	(cur (current-column)))
-;;     (if (< mid-cur)
-;; 	(set-window-hscroll (selected-window)
-;; 			    (- cur mid)))))
-
-;; (global-set-key (kbd "C-S-l") 'horz-recenter)
- 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("57e3f215bef8784157991c4957965aa31bac935aca011b29d7d8e113a652b693" "7575474658c34b905bcec30a725653b2138c2f2d3deef0587e3abfae08c5b276" default))
- '(geiser-guile-binary "guile2.2")
- '(package-selected-packages
-   '(pyenv pyenv-mode dracula-theme colonoscopy-theme badger-theme arc-dark-theme afternoon-theme abyss-theme which-key dune darkmine-theme darkburn-theme python-environment tuareg rust-mode haskell-mode expand-region evil)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-
 ;; cc-mode options
 (setq c-default-style "linux"
       c-basic-offset 4)
@@ -125,3 +99,16 @@
 ;; Enable CUA mode (rectangle select)
 ;;(setq cua-enable-cua-keys nil)
 ;;(cua-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(org-tree-slide solidity-mode which-key tuareg rust-mode python-environment pyenv-mode-auto magit lsp-mode highlight-parentheses haskell-mode geiser-guile fzf evil dune dracula-theme darkmine-theme darkburn-theme colonoscopy-theme change-inner badger-theme arc-dark-theme afternoon-theme abyss-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
