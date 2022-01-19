@@ -6,3 +6,5 @@
 *~
 # Ignore elpa directory
 elpa/
+# Ignore transient directory 
+transient/
