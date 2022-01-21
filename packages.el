@@ -37,6 +37,8 @@
 		dracula-theme
 		solidity-mode
 		org-tree-slide
+		browse-kill-ring
+		glsl-mode
 		)
 	  )
 			   

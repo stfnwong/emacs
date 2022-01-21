@@ -82,6 +82,13 @@
 
 (global-highlight-parentheses-mode t)
 
+;; Add flyspell for text modes
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+;; It does turn out that some other stuff is needed for two-finger clicks on Mac, but for the moment I don't need this.
+
+
 ;; Settings for lsp-mode
 (setq lsp-keymap-prefix "s-L")
 (require 'lsp-mode)
@@ -105,7 +112,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-tree-slide solidity-mode which-key tuareg rust-mode python-environment pyenv-mode-auto magit lsp-mode highlight-parentheses haskell-mode geiser-guile fzf evil dune dracula-theme darkmine-theme darkburn-theme colonoscopy-theme change-inner badger-theme arc-dark-theme afternoon-theme abyss-theme)))
+   '(glsl-mode browse-kill-ring org-tree-slide solidity-mode which-key tuareg rust-mode python-environment pyenv-mode-auto magit lsp-mode highlight-parentheses haskell-mode geiser-guile fzf evil dune dracula-theme darkmine-theme darkburn-theme colonoscopy-theme change-inner badger-theme arc-dark-theme afternoon-theme abyss-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
