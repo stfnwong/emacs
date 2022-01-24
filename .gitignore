@@ -8,3 +8,5 @@
 elpa/
 # Ignore transient directory 
 transient/
+# Ignore URL directory 
+url/
