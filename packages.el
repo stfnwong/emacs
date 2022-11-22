@@ -34,21 +34,21 @@
 		geiser-guile
 
 		;; Themes
-		ewal-doom-themes
+		;;ewal-doom-themes
 		darkburn-theme
 		darkmine-theme
 		afternoon-theme
 		colonoscopy-theme
 		dracula-theme
-		solidity-mode
+		;;solidity-mode
 		arc-dark-theme
 		dream-theme
-		ancient-one-dark-theme
+		;;ancient-one-dark-theme ;; NOTE: I orignally found these uusing package-search, are they just not maintained anymore?
 		exotica-theme
 
 		;; Org
-		org-tree-slide
-		browse-kill-ring
+		;;org-tree-slide
+		;;browse-kill-ring
 		)
 	  )
 
