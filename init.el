@@ -33,8 +33,8 @@
 (load "~/.emacs.d/packages.el")
 
 ;; Colorscheme
-;;(load-theme 'afternoon t)
-(load-theme 'arc-dark t)
+(load-theme 'afternoon t)
+;;(load-theme 'arc-dark t)
 
 ;; Turn on delete selection mode
 (delete-selection-mode 1)

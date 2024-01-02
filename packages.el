@@ -17,7 +17,7 @@
 		rust-mode
 		haskell-mode
 		markdown-mode
-		pyenv-mode-auto
+		;; pyenv-mode-auto ;; NOTE: package is now unavailable?
 		tuareg   ;; OCaml mode
 		evil
 		glsl-mode
@@ -35,13 +35,13 @@
 
 		;; Themes
 		;;ewal-doom-themes
-		darkburn-theme
+		;; darkburn-theme ;; TODO: also seems unavailable?
 		darkmine-theme
 		afternoon-theme
 		colonoscopy-theme
 		dracula-theme
 		;;solidity-mode
-		arc-dark-theme
+		;; arc-dark-theme   ;; TODO: how much stuff is actually on melpa?
 		dream-theme
 		;;ancient-one-dark-theme ;; NOTE: I orignally found these uusing package-search, are they just not maintained anymore?
 		exotica-theme
